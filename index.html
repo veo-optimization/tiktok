@@ -121,19 +121,7 @@
             100% { transform: scale(1); }
         }
         
-        .hint {
-            background: #FFF3CD;
-            border: 1px solid #FFEAA7;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 20px 0;
-            color: #856404;
-            font-size: 14px;
-        }
-        
-        .hint strong {
-            color: #FF0050;
-        }
+
     </style>
 </head>
 <body>
@@ -141,11 +129,6 @@
         <div class="tiktok-logo">🎵</div>
         
         <h1>Вхід в Академію TikTok</h1>
-        
-        <div class="hint">
-            <strong>Підказка:</strong> Пароль складається з однієї літери (v, e або o) та 4 цифр
-            <br>Приклад: <strong>v1234</strong>, <strong>e5678</strong>, <strong>o9999</strong>
-        </div>
         
         <div class="password-form">
             <input type="password" id="passwordInput" class="password-input" placeholder="Введіть пароль" maxlength="5">
@@ -168,7 +151,6 @@
             const errorMessage = document.getElementById('errorMessage');
             const successMessage = document.getElementById('successMessage');
             const passwordForm = document.querySelector('.password-form');
-            const hint = document.querySelector('.hint');
             
             // Регулярний вираз для перевірки: літера (v, e, o) + 4 цифри
             const passwordRegex = /^[veo]\d{4}$/;
@@ -178,7 +160,6 @@
                 errorMessage.style.display = 'none';
                 successMessage.style.display = 'block';
                 passwordForm.style.display = 'none';
-                hint.style.display = 'none';
                 
                 // Додаємо анімацію появи
                 successMessage.style.animation = 'pulse 2s infinite';
