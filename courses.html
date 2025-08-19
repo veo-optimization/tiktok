@@ -189,6 +189,39 @@
             box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
         }
 
+        .course-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 0, 80, 0.1);
+            border-radius: 10px;
+        }
+
+        .author-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: #FF0050;
+            font-size: 14px;
+        }
+
+        .author-title {
+            color: #666;
+            font-size: 12px;
+        }
+
         .stats-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
@@ -411,6 +444,25 @@
                 </div>
                 <button class="course-button">Почати курс</button>
             </div>
+
+            <div class="course-card" onclick="openCourse('psychology')">
+                <div class="course-icon">🧠</div>
+                <h3 class="course-title">Сімейна психологія та TikTok</h3>
+                <p class="course-description">
+                    Дослідження впливу соціальних мереж на психологічний стан жінок 
+                    та їх сімейні стосунки в стресових ситуаціях.
+                </p>
+                <div class="course-details">
+                    <span class="course-duration">4 тижні</span>
+                    <span class="course-level">Просунутий</span>
+                </div>
+                <div class="course-author">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiNGRjAwNTAiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAxMmMyLjIxIDAgNC0xLjc5IDQtNHMtMS43OS00LTQtNC00IDEuNzktNCA0IDEuNzkgNCA0IDR6bTAgMmMtMi42NyAwLTggMS4zNC04IDR2MmgxNnYtMmMwLTIuNjYtNS4zMy00LTgtNHoiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="Nataly Rosso" class="author-avatar">
+                    <span class="author-name">Nataly Rosso</span>
+                    <span class="author-title">Магістр сімейної психології</span>
+                </div>
+                <button class="course-button">Почати курс</button>
+            </div>
         </section>
 
         <section class="stats-section">
@@ -442,10 +494,14 @@
 
     <script>
         function openCourse(courseId) {
-            // Тут можна додати логіку для відкриття конкретного курсу
-            alert(`Відкривається курс: ${courseId}`);
-            // Можна перенаправити на сторінку курсу
-            // window.location.href = `course-${courseId}.html`;
+            // Логіка для відкриття конкретного курсу
+            if (courseId === 'psychology') {
+                window.location.href = 'course-psychology.html';
+            } else {
+                alert(`Відкривається курс: ${courseId}`);
+                // Можна перенаправити на сторінку курсу
+                // window.location.href = `course-${courseId}.html`;
+            }
         }
 
         // Плавна прокрутка для навігації

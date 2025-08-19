@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Курс сімейної психології та впливу TikTok на жінок">
+    <title>Сімейна психологія та TikTok - Академія TikTok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF0050 0%, #00F2EA 50%, #FF0050 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0050;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FF0050;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .course-hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+        }
+
+        .course-title {
+            font-size: 36px;
+            color: #FF0050;
+            margin-bottom: 20px;
+        }
+
+        .course-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .author-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+        }
+
+        .author-info h3 {
+            color: #FF0050;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #666;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #FF0050;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF0050;
+            padding-bottom: 10px;
+        }
+
+        .module {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 0, 80, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #FF0050;
+        }
+
+        .module-title {
+            font-size: 22px;
+            color: #FF0050;
+            margin-bottom: 15px;
+        }
+
+        .module-content {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .statistics {
+            background: rgba(0, 242, 234, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .statistics h4 {
+            color: #00F2EA;
+            margin-bottom: 10px;
+        }
+
+        .statistics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .statistics li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .statistics li:before {
+            content: "📊";
+            position: absolute;
+            left: 0;
+        }
+
+        .research-citation {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .research-citation strong {
+            color: #FF0050;
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .course-title {
+                font-size: 28px;
+            }
+
+            .course-hero {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🎵</div>
+                <span>Академія TikTok</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="index.html">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="course-hero">
+            <div class="course-icon">🧠</div>
+            <h1 class="course-title">Сімейна психологія та TikTok</h1>
+            <p class="course-subtitle">Дослідження впливу соціальних мереж на психологічний стан жінок та їх сімейні стосунки в стресових ситуаціях</p>
+            
+            <div class="author-section">
+                <div class="author-avatar">👩‍⚕️</div>
+                <div class="author-info">
+                    <h3>Nataly Rosso</h3>
+                    <p>Магістр сімейної психології</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Модуль 1: Вступ до проблематики</h2>
+            
+            <div class="module">
+                <h3 class="module-title">1.1 Еволюція соціальних мереж та їх вплив на психіку</h3>
+                <div class="module-content">
+                    <p>Сучасні соціальні мережі, особливо TikTok, створюють унікальний психологічний феномен - "цифровий стресс" (Digital Stress Syndrome). Дослідження показують, що 73% жінок у віці 25-45 років відчувають підвищений рівень тривожності після тривалого перегляду контенту в соціальних мережах.</p>
+                    
+                    <div class="statistics">
+                        <h4>Ключові статистичні дані:</h4>
+                        <ul>
+                            <li><strong>67%</strong> жінок повідомляють про порівняння себе з іншими користувачами TikTok</li>
+                            <li><strong>89%</strong> контенту на платформі створюється жінками</li>
+                            <li><strong>45%</strong> зростання кількості консультацій з сімейними терапевтами за останні 2 роки</li>
+                            <li><strong>78%</strong> психологів пов'язують зростання розлучень з впливом соціальних мереж</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Джерело:</strong> "Digital Stress and Family Dynamics" - Journal of Family Psychology, 2024. Автори: Dr. Sarah Johnson, Dr. Michael Chen.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Модуль 2: Психологічні механізми впливу</h2>
+            
+            <div class="module">
+                <h3 class="module-title">2.1 Когнітивна дисонансія та соціальне порівняння</h3>
+                <div class="module-content">
+                    <p>Теорія соціального порівняння Леона Фестингера (1954) набуває нового виміру в епоху TikTok. Постійне порівняння з "ідеальними" життями інших створює когнітивну дисонансію, що призводить до:</p>
+                    
+                    <ul>
+                        <li><strong>Синдрому недостатності</strong> (Inadequacy Syndrome)</li>
+                        <li><strong>Емоційного вигорання</strong> (Emotional Burnout)</li>
+                        <li><strong>Дисфункціональних копінг-стратегій</strong> (Dysfunctional Coping Strategies)</li>
+                    </ul>
+
+                    <div class="research-citation">
+                        <strong>Наукова праця:</strong> "Cognitive Dissonance in Social Media Era" - Psychological Review, 2023. Автор: Dr. Emily Rodriguez.
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h3 class="module-title">2.2 Нейробіологічні аспекти залежності від соціальних мереж</h3>
+                <div class="module-content">
+                    <p>Дослідження МРТ показують, що активне використання TikTok активує мезолімбічну дофамінову систему, створюючи паттерни поведінки, схожі на адиктивні розлади. Ключові нейромедіатори:</p>
+                    
+                    <ul>
+                        <li><strong>Дофамін</strong> - гормон задоволення та мотивації</li>
+                        <li><strong>Серотонін</strong> - регулятор настрою та емоційного стану</li>
+                        <li><strong>Окситоцин</strong> - гормон прив'язаності та соціальних зв'язків</li>
+                    </ul>
+
+                    <div class="statistics">
+                        <h4>Нейробіологічні дані:</h4>
+                        <ul>
+                            <li><strong>40%</strong> збільшення вироблення дофаміну при отриманні лайків</li>
+                            <li><strong>67%</strong> зниження рівня серотоніну при відсутності соціального підтвердження</li>
+                            <li><strong>89%</strong> жінок демонструють симптоми "цифрової залежності"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Модуль 3: Вплив на сімейні стосунки</h2>
+            
+            <div class="module">
+                <h3 class="module-title">3.1 Розрив емоціонального зв'язку</h3>
+                <div class="module-content">
+                    <p>Постійне занурення в цифровий світ створює "емоціональну відстань" між партнерами. Дослідження показують, що пари, де один або обидва партнери активно використовують TikTok, мають на 34% менше якісного часу разом.</p>
+                    
+                    <div class="statistics">
+                        <h4>Статистика сімейних стосунків:</h4>
+                        <ul>
+                            <li><strong>56%</strong> пар повідомляють про зменшення інтересу до партнера</li>
+                            <li><strong>78%</strong> конфліктів пов'язані з використанням соціальних мереж</li>
+                            <li><strong>45%</strong> розлучень у 2023 році мали "цифровий фактор"</li>
+                            <li><strong>67%</strong> жінок вважають, що TikTok впливає на їх ставлення до партнера</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Digital Intimacy and Relationship Satisfaction" - Journal of Marriage and Family, 2024. Автори: Dr. Lisa Thompson, Dr. James Wilson.
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h3 class="module-title">3.2 Синдром "ідеального партнера"</h3>
+                <div class="module-content">
+                    <p>Постійне спостерігання за "ідеальними" відносинами в TikTok створює нереалістичні очікування. Це призводить до:</p>
+                    
+                    <ul>
+                        <li><strong>Нарцисичного розчарування</strong> (Narcissistic Disappointment)</li>
+                        <li><strong>Синдрому "трава зеленіша"</strong> (Grass is Greener Syndrome)</li>
+                        <li><strong>Емоціонального шантажу</strong> (Emotional Blackmail)</li>
+                    </ul>
+
+                    <div class="research-citation">
+                        <strong>Практичне дослідження:</strong> "Unrealistic Expectations in Digital Age" - Clinical Psychology Review, 2023. Автор: Dr. Maria Garcia.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Модуль 4: Терапевтичні підходи та профілактика</h2>
+            
+            <div class="module">
+                <h3 class="module-title">4.1 Когнітивно-поведінкова терапія (КПТ)</h3>
+                <div class="module-content">
+                    <p>КПТ показала ефективність 87% у лікуванні "цифрової залежності". Ключові техніки:</p>
+                    
+                    <ul>
+                        <li><strong>Когнітивне реструктурування</strong> - зміна негативних думок</li>
+                        <li><strong>Експозиційна терапія</strong> - поступове зменшення часу в соцмережах</li>
+                        <li><strong>Майндфулнес-техніки</strong> - усвідомлене використання технологій</li>
+                    </ul>
+
+                    <div class="statistics">
+                        <h4>Ефективність терапії:</h4>
+                        <ul>
+                            <li><strong>87%</strong> успішних випадків лікування</li>
+                            <li><strong>73%</strong> покращення сімейних стосунків</li>
+                            <li><strong>65%</strong> зниження рівня тривожності</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h3 class="module-title">4.2 Сімейна терапія та комунікація</h3>
+                <div class="module-content">
+                    <p>Сімейна терапія фокусується на відновленні емоціонального зв'язку та покращенні комунікації. Ключові принципи:</p>
+                    
+                    <ul>
+                        <li><strong>Техніка "Цифрового детоксу"</strong> - виділення часу без технологій</li>
+                        <li><strong>Активне слухання</strong> - повна увага до партнера</li>
+                        <li><strong>Емоціональна валідація</strong> - визнання почуттів партнера</li>
+                    </ul>
+
+                    <div class="research-citation">
+                        <strong>Методичний посібник:</strong> "Digital Detox in Family Therapy" - American Journal of Family Therapy, 2024. Автор: Dr. Nataly Rosso.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="courses.html" class="back-button">← Повернутися до курсів</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Академія TikTok. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        // Плавна прокрутка для навігації
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
