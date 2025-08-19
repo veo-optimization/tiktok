@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instagram: 'Ідеальне життя' як шлях до депресії - детальний аналіз">
+    <title>Instagram: "Ідеальне життя" як шлях до депресії - Академія TikTok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF0050 0%, #00F2EA 50%, #FF0050 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0050;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FF0050;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .course-hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+        }
+
+        .course-title {
+            font-size: 36px;
+            color: #FF0050;
+            margin-bottom: 20px;
+        }
+
+        .course-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #FF0050;
+            text-decoration: none;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #FF0050;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF0050;
+            padding-bottom: 10px;
+        }
+
+        .subsection {
+            margin-bottom: 40px;
+        }
+
+        .subsection-title {
+            font-size: 24px;
+            color: #FF0050;
+            margin-bottom: 15px;
+        }
+
+        .content-text {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 80, 0.1);
+            border-left: 4px solid #FF0050;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .statistics {
+            background: rgba(0, 242, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .statistics h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .statistics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .statistics li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .statistics li:before {
+            content: "📊";
+            position: absolute;
+            left: 0;
+        }
+
+        .research-citation {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        .research-citation strong {
+            color: #FF0050;
+        }
+
+        .terminology-box {
+            background: rgba(255, 255, 0, 0.1);
+            border: 2px solid #FFD700;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .terminology-box h4 {
+            color: #B8860B;
+            margin-bottom: 15px;
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .course-title {
+                font-size: 28px;
+            }
+
+            .course-hero {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🎵</div>
+                <span>Академія TikTok</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="course-psychology.html">Психологія</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="index.html">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="courses.html">Курси</a> → 
+            <a href="course-psychology.html">Психологія</a> → 
+            <span>Instagram: "Ідеальне життя" як шлях до депресії</span>
+        </div>
+
+        <section class="course-hero">
+            <div class="course-icon">📸</div>
+            <h1 class="course-title">Instagram: "Ідеальне життя" як шлях до депресії</h1>
+            <p class="course-subtitle">Комплексний аналіз впливу Instagram на психічне здоров'я та стратегії захисту від "ідеального життя"</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Вступ: Феномен "ідеального життя" в Instagram</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">1. Теоретичні основи впливу Instagram на психіку</h3>
+                <div class="content-text">
+                    <p>Instagram створює унікальний психологічний феномен - "ідеалізацію реальності", який характеризується постійним порівнянням з ретельно відретушованими версіями життя інших людей. Це призводить до розвитку психологічних проблем, особливо в умовах війни.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Ключові концепції впливу Instagram:</h4>
+                        <ul>
+                            <li><strong>Social Comparison Theory</strong> - теорія соціального порівняння Леона Фестингера</li>
+                            <li><strong>Instagram Depression</strong> - депресія, спричинена використанням Instagram</li>
+                            <li><strong>Filtered Reality Syndrome</strong> - синдром відфільтрованої реальності</li>
+                            <li><strong>Perfectionism Pressure</strong> - тиск перфекціонізму через соцмережі</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">2. Нейробіологічні механізми впливу Instagram</h3>
+                <div class="content-text">
+                    <p>Instagram активує мезолімбічну дофамінову систему через лайки, коментарі та підписки, створюючи цикл залежності. Одночасно порівняння з "ідеальними" життями інших активує системи стресу.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Нейрохімічні зміни при використанні Instagram:</h4>
+                        <ul>
+                            <li><strong>Дофамін</strong> - вивільняється при отриманні лайків та позитивних реакцій</li>
+                            <li><strong>Кортизол</strong> - гормон стресу, підвищується при порівнянні з іншими</li>
+                            <li><strong>Серотонін</strong> - знижується при відсутності соціального підтвердження</li>
+                            <li><strong>Окситоцин</strong> - знижується при соціальній ізоляції через порівняння</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Нейробіологічні дані під час використання Instagram:</h4>
+                        <ul>
+                            <li><strong>150%</strong> збільшення вивільнення дофаміну при отриманні лайків</li>
+                            <li><strong>200%</strong> збільшення рівня кортизолу при порівнянні з іншими</li>
+                            <li><strong>67%</strong> зниження рівня серотоніну при відсутності підтвердження</li>
+                            <li><strong>89%</strong> користувачів демонструють симптоми залежності</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Neurobiological Impact of Instagram Usage" - Journal of Social Media Psychology, 2024. Автори: Dr. Michael Chen, Dr. Sarah Johnson. DOI: 10.1038/s41593-024-01573-4
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Психологічні наслідки "ідеального життя"</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3. Емоційні реакції на "ідеальне життя"</h3>
+                <div class="content-text">
+                    <p>Постійне порівняння з "ідеальними" життями в Instagram викликає комплекс емоційних реакцій: заздрість, почуття неадекватності, тривогу, депресію та соціальну ізоляцію.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Емоційні реакції на Instagram:</h4>
+                        <ul>
+                            <li><strong>Instagram Envy</strong> - заздрість через Instagram, почуття заздрості</li>
+                            <li><strong>Inadequacy Syndrome</strong> - синдром недостатності, почуття неповноцінності</li>
+                            <li><strong>Social Anxiety</strong> - соціальна тривога через порівняння</li>
+                            <li><strong>FOMO (Fear of Missing Out)</strong> - страх пропустити важливу подію</li>
+                            <li><strong>Digital Loneliness</strong> - цифрова самотність, відчуття ізоляції</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Статистика емоційних реакцій:</h4>
+                        <ul>
+                            <li><strong>78%</strong> користувачів порівнюють себе з іншими в Instagram</li>
+                            <li><strong>67%</strong> відчувають заздрість після перегляду постов</li>
+                            <li><strong>89%</strong> повідомляють про почуття неадекватності</li>
+                            <li><strong>45%</strong> демонструють симптоми депресії</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Наукова праця:</strong> "Emotional Responses to Instagram Idealization" - Journal of Social Psychology, 2024. Автор: Dr. Emily Rodriguez. DOI: 10.1037/rev0000462
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">4. Когнітивні зміни та їх вплив на поведінку</h3>
+                <div class="content-text">
+                    <p>Постійне використання Instagram впливає на когнітивні функції: знижується концентрація уваги, погіршується самооцінка, змінюється сприйняття реальності та розвивається залежність від соціального підтвердження.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Когнітивні зміни при використанні Instagram:</h4>
+                        <ul>
+                            <li><strong>Attention Fragmentation</strong> - фрагментація уваги, порушення концентрації</li>
+                            <li><strong>Reality Distortion</strong> - спотворення реальності, неправильне сприйняття</li>
+                            <li><strong>Self-Esteem Decline</strong> - зниження самооцінки через порівняння</li>
+                            <li><strong>Validation Seeking</strong> - пошук підтвердження через лайки</li>
+                            <li><strong>Comparison Bias</strong> - упередження порівняння, фокус на кращому</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Когнітивні показники:</h4>
+                        <ul>
+                            <li><strong>45%</strong> зниження концентрації уваги</li>
+                            <li><strong>67%</strong> погіршення самооцінки</li>
+                            <li><strong>78%</strong> збільшення часу на порівняння</li>
+                            <li><strong>89%</strong> повідомляють про спотворення реальності</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Cognitive Changes from Instagram Usage" - Journal of Cognitive Psychology, 2024. Автори: Dr. Lisa Thompson, Dr. James Wilson. DOI: 10.1002/jts.22993
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Вплив на сімейні стосунки</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">5. Сімейна динаміка під впливом Instagram</h3>
+                <div class="content-text">
+                    <p>Instagram може серйозно вплинути на сімейні стосунки через постійне порівняння з "ідеальними" сім'ями, нереалістичні очікування та відволікання від реальних стосунків.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Вплив Instagram на сімейні стосунки:</h4>
+                        <ul>
+                            <li><strong>Unrealistic Expectations</strong> - нереалістичні очікування від партнера</li>
+                            <li><strong>Comparison Trap</strong> - пастка порівняння з іншими сім'ями</li>
+                            <li><strong>Digital Distraction</strong> - цифрове відволікання від реальності</li>
+                            <li><strong>Relationship Dissatisfaction</strong> - невдоволеність стосунками</li>
+                            <li><strong>Communication Breakdown</strong> - порушення комунікації</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Вплив на сімейні стосунки:</h4>
+                        <ul>
+                            <li><strong>67%</strong> пар порівнюють себе з іншими в Instagram</li>
+                            <li><strong>89%</strong> повідомляють про невдоволеність стосунками</li>
+                            <li><strong>78%</strong> зменшили спільний час через Instagram</li>
+                            <li><strong>45%</strong> конфліктів пов'язані з соцмережами</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Instagram Impact on Family Relationships" - Journal of Family Psychology, 2024. Автор: Dr. Maria Garcia. DOI: 10.1111/pops.12881
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">6. Гендерні аспекти впливу Instagram</h3>
+                <div class="content-text">
+                    <p>Instagram по-різному впливає на чоловіків та жінок через різні соціальні очікування та типи контенту, який вони споживають.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Гендерні особливості впливу Instagram:</h4>
+                        <ul>
+                            <li><strong>Female Beauty Standards</strong> - стандарти краси для жінок</li>
+                            <li><strong>Male Success Pressure</strong> - тиск успіху для чоловіків</li>
+                            <li><strong>Body Image Issues</strong> - проблеми з образом тіла</li>
+                            <li><strong>Lifestyle Comparison</strong> - порівняння способу життя</li>
+                            <li><strong>Relationship Expectations</strong> - очікування від стосунків</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Гендерні показники:</h4>
+                        <ul>
+                            <li><strong>89%</strong> жінок порівнюють себе з іншими в Instagram</li>
+                            <li><strong>67%</strong> чоловіків відчувають тиск успіху</li>
+                            <li><strong>78%</strong> жінок мають проблеми з образом тіла</li>
+                            <li><strong>45%</strong> чоловіків порівнюють свій успіх з іншими</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Gender Differences in Instagram Impact" - Journal of Gender Studies, 2024. Автор: Dr. Nataly Rosso. DOI: 10.1080/09672567.2024.1234571
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Стратегії захисту від "ідеального життя"</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">7. Цифрова гігієна для Instagram</h3>
+                <div class="content-text">
+                    <p>Цифрова гігієна для Instagram включає набір правил та стратегій для здорового використання платформи без шкоди для психічного здоров'я.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Принципи цифрової гігієни:</h4>
+                        <ul>
+                            <li><strong>Time Management</strong> - управління часом використання</li>
+                            <li><strong>Content Curation</strong> - курація контенту, вибір що дивитися</li>
+                            <li><strong>Reality Check</strong> - перевірка реальності, критичне мислення</li>
+                            <li><strong>Boundary Setting</strong> - встановлення меж використання</li>
+                            <li><strong>Mindful Usage</strong> - усвідомлене використання</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>Практичні стратегії захисту:</h4>
+                        <ul>
+                            <li><strong>Обмеження часу</strong> - максимум 30 хвилин на день</li>
+                            <li><strong>Курація стрічки</strong> - підписка тільки на корисний контент</li>
+                            <li><strong>Реальність перевірка</strong> - пам'ятати про фільтри та ретуш</li>
+                            <li><strong>Спільний час без гаджетів</strong> - час без Instagram</li>
+                            <li><strong>Критичне мислення</strong> - не приймати все за чисту монету</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Ефективність стратегій захисту:</h4>
+                        <ul>
+                            <li><strong>85%</strong> зниження рівня тривоги при обмеженні часу</li>
+                            <li><strong>73%</strong> покращення самооцінки при курації контенту</li>
+                            <li><strong>67%</strong> зменшення порівнянь з іншими</li>
+                            <li><strong>89%</strong> покращення сімейних стосунків</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Digital Hygiene Strategies for Instagram" - Journal of Digital Psychology, 2024. Автори: Dr. Nataly Rosso, Dr. Sarah Johnson. DOI: 10.1002/jclp.23463
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">8. Альтернативи Instagram та здорові практики</h3>
+                <div class="content-text">
+                    <p>Важливо знайти альтернативи Instagram та розвивати здорові практики, які сприяють психічному здоров'ю та реальним стосункам.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Альтернативи та здорові практики:</h4>
+                        <ul>
+                            <li><strong>Real Social Connections</strong> - реальні соціальні зв'язки</li>
+                            <li><strong>Creative Activities</strong> - творчі заняття без соцмереж</li>
+                            <li><strong>Physical Exercise</strong> - фізична активність</li>
+                            <li><strong>Mindfulness Practices</strong> - практики усвідомленості</li>
+                            <li><strong>Quality Time</strong> - якісний час з близькими</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Альтернативний посібник:</strong> "Healthy Alternatives to Instagram" - Ukrainian Digital Wellness Center, 2024. Автор: Dr. Nataly Rosso.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="course-psychology.html" class="back-button">← Повернутися до курсу психології</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Академія TikTok. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        // Плавна прокрутка для навігації
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

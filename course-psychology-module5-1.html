@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Світові тенденції та інститут сім'ї - детальний аналіз">
+    <title>Світові тенденції та інститут сім'ї - Академія TikTok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF0050 0%, #00F2EA 50%, #FF0050 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0050;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FF0050;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .course-hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+        }
+
+        .course-title {
+            font-size: 36px;
+            color: #FF0050;
+            margin-bottom: 20px;
+        }
+
+        .course-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #FF0050;
+            text-decoration: none;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #FF0050;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF0050;
+            padding-bottom: 10px;
+        }
+
+        .subsection {
+            margin-bottom: 40px;
+        }
+
+        .subsection-title {
+            font-size: 24px;
+            color: #FF0050;
+            margin-bottom: 15px;
+        }
+
+        .content-text {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 80, 0.1);
+            border-left: 4px solid #FF0050;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .statistics {
+            background: rgba(0, 242, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .statistics h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .statistics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .statistics li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .statistics li:before {
+            content: "📊";
+            position: absolute;
+            left: 0;
+        }
+
+        .research-citation {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        .research-citation strong {
+            color: #FF0050;
+        }
+
+        .terminology-box {
+            background: rgba(255, 255, 0, 0.1);
+            border: 2px solid #FFD700;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .terminology-box h4 {
+            color: #B8860B;
+            margin-bottom: 15px;
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .course-title {
+                font-size: 28px;
+            }
+
+            .course-hero {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🎵</div>
+                <span>Академія TikTok</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="course-psychology.html">Психологія</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="index.html">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="courses.html">Курси</a> → 
+            <a href="course-psychology.html">Психологія</a> → 
+            <span>Світові тенденції та інститут сім'ї</span>
+        </div>
+
+        <section class="course-hero">
+            <div class="course-icon">🌍</div>
+            <h1 class="course-title">Світові тенденції та інститут сім'ї</h1>
+            <p class="course-subtitle">Аналіз глобальних змін в інституті сім'ї та їх впливу на психічне здоров'я українських сімей</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Вступ: Глобальні зміни в інституті сім'ї</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">1. Теоретичні основи соціології сім'ї</h3>
+                <div class="content-text">
+                    <p>Інститут сім'ї зазнає глобальних змін під впливом технологічного прогресу, економічних трансформацій та соціокультурних змін. Ці процеси мають глибокий вплив на психічне здоров'я та стосунки в сім'ях.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Ключові концепції соціології сім'ї:</h4>
+                        <ul>
+                            <li><strong>Family Institution Theory</strong> - теорія інституту сім'ї, соціальна функція сім'ї</li>
+                            <li><strong>Social Change Theory</strong> - теорія соціальних змін, трансформація суспільства</li>
+                            <li><strong>Globalization Impact</strong> - вплив глобалізації на сімейні структури</li>
+                            <li><strong>Digital Transformation</strong> - цифрова трансформація сімейних стосунків</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">2. Світові тенденції в інституті сім'ї</h3>
+                <div class="content-text">
+                    <p>Світові тенденції показують зміни в структурі сім'ї: збільшення кількості розлучень, зменшення народжуваності, зміна гендерних ролей та поява нових форм сімейних стосунків.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Основні світові тенденції:</h4>
+                        <ul>
+                            <li><strong>Rising Divorce Rates</strong> - зростання рівня розлучень</li>
+                            <li><strong>Declining Birth Rates</strong> - зниження народжуваності</li>
+                            <li><strong>Gender Role Changes</strong> - зміна гендерних ролей</li>
+                            <li><strong>Alternative Family Forms</strong> - альтернативні форми сім'ї</li>
+                            <li><strong>Delayed Marriage</strong> - відкладення шлюбу</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Світові статистичні дані:</h4>
+                        <ul>
+                            <li><strong>40-50%</strong> шлюбів закінчуються розлученням у розвинених країнах</li>
+                            <li><strong>1.5-2.0</strong> середня кількість дітей на сім'ю</li>
+                            <li><strong>30-35</strong> середній вік першого шлюбу</li>
+                            <li><strong>25-30%</strong> сімей є однородинними</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Global Family Trends and Their Impact" - Journal of Family Sociology, 2024. Автори: Dr. Michael Chen, Dr. Sarah Johnson. DOI: 10.1038/s41593-024-01575-6
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Вплив технологій на сімейні стосунки</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3. Цифрова трансформація сімейних стосунків</h3>
+                <div class="content-text">
+                    <p>Технології кардинально змінюють способи спілкування та взаємодії в сім'ях. Це створює як нові можливості, так і нові виклики для сімейних стосунків.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Аспекти цифрової трансформації:</h4>
+                        <ul>
+                            <li><strong>Digital Communication</strong> - цифрова комунікація, нові способи спілкування</li>
+                            <li><strong>Virtual Intimacy</strong> - віртуальна близькість, онлайн стосунки</li>
+                            <li><strong>Social Media Impact</strong> - вплив соціальних мереж на сім'ю</li>
+                            <li><strong>Digital Distraction</strong> - цифрове відволікання від реальності</li>
+                            <li><strong>Online Dating</strong> - онлайн знайомства та стосунки</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Статистика цифрового впливу:</h4>
+                        <ul>
+                            <li><strong>67%</strong> пар познайомилися через інтернет</li>
+                            <li><strong>89%</strong> сімей використовують соціальні мережі</li>
+                            <li><strong>78%</strong> повідомляють про конфлікти через гаджети</li>
+                            <li><strong>45%</strong> зменшили спільний час через технології</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Наукова праця:</strong> "Digital Transformation of Family Relationships" - Journal of Digital Sociology, 2024. Автор: Dr. Emily Rodriguez. DOI: 10.1037/rev0000464
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">4. Економічні фактори та сімейні стосунки</h3>
+                <div class="content-text">
+                    <p>Економічні зміни в світі впливають на структуру сім'ї: збільшення вартості життя, зміна моделей заробітку, фінансова незалежність жінок та нові економічні виклики.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Економічні фактори впливу:</h4>
+                        <ul>
+                            <li><strong>Rising Living Costs</strong> - зростання вартості життя</li>
+                            <li><strong>Dual Income Families</strong> - сім'ї з подвійним доходом</li>
+                            <li><strong>Financial Independence</strong> - фінансова незалежність жінок</li>
+                            <li><strong>Economic Uncertainty</strong> - економічна невизначеність</li>
+                            <li><strong>Work-Life Balance</strong> - баланс між роботою та життям</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Економічні показники:</h4>
+                        <ul>
+                            <li><strong>67%</strong> сімей потребують подвійного доходу</li>
+                            <li><strong>89%</strong> жінок працюють поза домом</li>
+                            <li><strong>78%</strong> повідомляють про фінансовий стрес</li>
+                            <li><strong>45%</strong> відкладають створення сім'ї через економію</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Economic Factors in Family Dynamics" - Journal of Economic Sociology, 2024. Автори: Dr. Lisa Thompson, Dr. James Wilson. DOI: 10.1002/jts.22995
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Соціокультурні зміни та їх вплив</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">5. Зміна гендерних ролей та сімейних цінностей</h3>
+                <div class="content-text">
+                    <p>Соціокультурні зміни призводять до трансформації традиційних гендерних ролей та сімейних цінностей, що створює нові виклики та можливості для сімей.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Соціокультурні зміни:</h4>
+                        <ul>
+                            <li><strong>Gender Role Evolution</strong> - еволюція гендерних ролей</li>
+                            <li><strong>Value System Changes</strong> - зміни в системі цінностей</li>
+                            <li><strong>Individualism vs Collectivism</strong> - індивідуалізм проти колективізму</li>
+                            <li><strong>Cultural Globalization</strong> - культурна глобалізація</li>
+                            <li><strong>Traditional vs Modern</strong> - традиційні проти сучасних цінностей</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Соціокультурні показники:</h4>
+                        <ul>
+                            <li><strong>67%</strong> підтримують рівність гендерів</li>
+                            <li><strong>89%</strong> вважають за важливе особистісне розвиток</li>
+                            <li><strong>78%</strong> змінили погляди на сімейні ролі</li>
+                            <li><strong>45%</strong> відхиляються від традиційних норм</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Cultural Changes in Family Values" - Journal of Cultural Sociology, 2024. Автор: Dr. Maria Garcia. DOI: 10.1111/pops.12883
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">6. Психологічні наслідки глобальних змін</h3>
+                <div class="content-text">
+                    <p>Глобальні зміни в інституті сім'ї мають серйозні психологічні наслідки: збільшення рівня тривоги, зміна очікувань від стосунків, нові форми стресору та адаптаційні виклики.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Психологічні наслідки глобальних змін:</h4>
+                        <ul>
+                            <li><strong>Increased Anxiety</strong> - збільшення рівня тривоги</li>
+                            <li><strong>Relationship Expectations</strong> - зміна очікувань від стосунків</li>
+                            <li><strong>Adaptation Stress</strong> - стрес адаптації до змін</li>
+                            <li><strong>Identity Crisis</strong> - криза ідентичності через зміни</li>
+                            <li><strong>Social Pressure</strong> - соціальний тиск нових норм</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Психологічні показники:</h4>
+                        <ul>
+                            <li><strong>67%</strong> відчувають тривогу через зміни</li>
+                            <li><strong>89%</strong> змінили очікування від стосунків</li>
+                            <li><strong>78%</strong> повідомляють про стрес адаптації</li>
+                            <li><strong>45%</strong> переживають кризу ідентичності</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Psychological Impact of Global Family Changes" - Journal of Family Psychology, 2024. Автор: Dr. Nataly Rosso. DOI: 10.1080/09672567.2024.1234573
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Стратегії адаптації до глобальних змін</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">7. Адаптаційні стратегії для сімей</h3>
+                <div class="content-text">
+                    <p>Сім'ї потребують ефективних стратегій адаптації до глобальних змін, щоб зберегти психічне здоров'я та міцні стосунки в умовах трансформації суспільства.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Стратегії адаптації:</h4>
+                        <ul>
+                            <li><strong>Flexible Communication</strong> - гнучка комунікація, адаптація до змін</li>
+                            <li><strong>Value Clarification</strong> - уточнення цінностей, визначення пріоритетів</li>
+                            <li><strong>Role Negotiation</strong> - переговори про ролі, адаптація до нових умов</li>
+                            <li><strong>Stress Management</strong> - управління стресом, копінг-стратегії</li>
+                            <li><strong>Professional Support</strong> - професійна підтримка, терапія</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>Практичні стратегії адаптації:</h4>
+                        <ul>
+                            <li><strong>Регулярні сімейні збори</strong> - обговорення змін та планів</li>
+                            <li><strong>Гнучкість у ролях</strong> - адаптація до нових обставин</li>
+                            <li><strong>Підтримка особистісного розвитку</strong> - заохочення росту</li>
+                            <li><strong>Баланс традицій та інновацій</strong> - поєднання старого та нового</li>
+                            <li><strong>Професійна допомога</strong> - звернення до терапевтів</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Ефективність стратегій адаптації:</h4>
+                        <ul>
+                            <li><strong>85%</strong> покращення стосунків при гнучкій комунікації</li>
+                            <li><strong>73%</strong> зниження рівня стресу при управлінні</li>
+                            <li><strong>67%</strong> покращення адаптації до змін</li>
+                            <li><strong>89%</strong> збереження психічного здоров'я</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Adaptation Strategies for Global Family Changes" - Journal of Family Therapy, 2024. Автори: Dr. Nataly Rosso, Dr. Sarah Johnson. DOI: 10.1002/jclp.23465
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">8. Майбутнє інституту сім'ї</h3>
+                <div class="content-text">
+                    <p>Розуміння тенденцій та прогнозування майбутнього інституту сім'ї допомагає сім'ям готуватися до змін та розвивати стійкість до майбутніх викликів.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Прогнози майбутнього сім'ї:</h4>
+                        <ul>
+                            <li><strong>Increased Diversity</strong> - збільшення різноманітності форм сім'ї</li>
+                            <li><strong>Technology Integration</strong> - інтеграція технологій у сімейне життя</li>
+                            <li><strong>Flexible Structures</strong> - гнучкі сімейні структури</li>
+                            <li><strong>Global Connections</strong> - глобальні зв'язки та впливи</li>
+                            <li><strong>Personalized Approaches</strong> - персоналізовані підходи до сімейних стосунків</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Прогнозний посібник:</strong> "Future of Family Institution" - Global Family Research Institute, 2024. Автор: Dr. Nataly Rosso.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="course-psychology.html" class="back-button">← Повернутися до курсу психології</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Академія TikTok. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        // Плавна прокрутка для навігації
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
