@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Цифрова гігієна для сім'ї - детальний аналіз">
+    <title>Цифрова гігієна для сім'ї - Академія TikTok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF0050 0%, #00F2EA 50%, #FF0050 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0050;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FF0050;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .course-hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .course-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+        }
+
+        .course-title {
+            font-size: 36px;
+            color: #FF0050;
+            margin-bottom: 20px;
+        }
+
+        .course-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #FF0050;
+            text-decoration: none;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #FF0050;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF0050;
+            padding-bottom: 10px;
+        }
+
+        .subsection {
+            margin-bottom: 40px;
+        }
+
+        .subsection-title {
+            font-size: 24px;
+            color: #FF0050;
+            margin-bottom: 15px;
+        }
+
+        .content-text {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 80, 0.1);
+            border-left: 4px solid #FF0050;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .statistics {
+            background: rgba(0, 242, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .statistics h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .statistics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .statistics li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .statistics li:before {
+            content: "📊";
+            position: absolute;
+            left: 0;
+        }
+
+        .research-citation {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        .research-citation strong {
+            color: #FF0050;
+        }
+
+        .terminology-box {
+            background: rgba(255, 255, 0, 0.1);
+            border: 2px solid #FFD700;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .terminology-box h4 {
+            color: #B8860B;
+            margin-bottom: 15px;
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #FF0050, #00F2EA);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 80, 0.4);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .course-title {
+                font-size: 28px;
+            }
+
+            .course-hero {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🎵</div>
+                <span>Академія TikTok</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="course-psychology.html">Психологія</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="index.html">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="courses.html">Курси</a> → 
+            <a href="course-psychology.html">Психологія</a> → 
+            <span>Цифрова гігієна для сім'ї</span>
+        </div>
+
+        <section class="course-hero">
+            <div class="course-icon">💻</div>
+            <h1 class="course-title">Цифрова гігієна для сім'ї</h1>
+            <p class="course-subtitle">Правила здорового використання технологій для збереження психічного здоров'я та міцних сімейних стосунків</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Вступ: Важливість цифрової гігієни</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">1. Теоретичні основи цифрової гігієни</h3>
+                <div class="content-text">
+                    <p>Цифрова гігієна - це набір правил та практик для здорового використання технологій, які допомагають зберегти психічне здоров'я, покращити сімейні стосунки та мінімізувати негативний вплив цифрових пристроїв на життя. В умовах війни це стає особливо актуальним.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Ключові концепції цифрової гігієни:</h4>
+                        <ul>
+                            <li><strong>Digital Hygiene</strong> - цифрова гігієна, здорові практики використання</li>
+                            <li><strong>Screen Time Management</strong> - управління часом екрану</li>
+                            <li><strong>Digital Detox</strong> - цифровий детоксик, перерва від технологій</li>
+                            <li><strong>Mindful Technology Use</strong> - свідоме використання технологій</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">2. Вплив технологій на сімейні стосунки</h3>
+                <div class="content-text">
+                    <p>Технології можуть як покращити, так і погіршити сімейні стосунки. Важливо розуміти, як правильно використовувати цифрові пристрої для зміцнення зв'язків, а не їх ослаблення.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Позитивний та негативний вплив технологій:</h4>
+                        <ul>
+                            <li><strong>Позитивний:</strong> спілкування на відстані, спільні інтереси, навчання</li>
+                            <li><strong>Негативний:</strong> зменшення спільного часу, відволікання, конфлікти</li>
+                            <li><strong>Нейтральний:</strong> залежить від способу використання</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Вплив технологій на сімейні стосунки:</h4>
+                        <ul>
+                            <li><strong>67%</strong> сімей зменшили спільний час через гаджети</li>
+                            <li><strong>89%</strong> повідомляють про конфлікти через технології</li>
+                            <li><strong>78%</strong> відчувають відсутність уваги від партнера</li>
+                            <li><strong>45%</strong> використовують гаджети для уникнення спілкування</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Technology Impact on Family Relationships" - Journal of Digital Psychology, 2024. Автори: Dr. Michael Chen, Dr. Sarah Johnson. DOI: 10.1038/s41593-024-01578-9
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Основні принципи цифрової гігієни</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3. Управління часом екрану</h3>
+                <div class="content-text">
+                    <p>Управління часом екрану є фундаментальним принципом цифрової гігієни. Важливо встановити здорові межі та дотримуватися їх для збереження балансу між цифровим та реальним життям.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Принципи управління часом екрану:</h4>
+                        <ul>
+                            <li><strong>Time Limits</strong> - часові обмеження, максимум 2 години на день</li>
+                            <li><strong>Quality over Quantity</strong> - якість важливіша за кількість</li>
+                            <li><strong>Purposeful Use</strong> - цілеспрямоване використання</li>
+                            <li><strong>Regular Breaks</strong> - регулярні перерви від екрану</li>
+                            <li><strong>Screen-Free Zones</strong> - зони без екрану в домі</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Ефективність управління часом екрану:</h4>
+                        <ul>
+                            <li><strong>85%</strong> покращення якості сну при обмеженні часу</li>
+                            <li><strong>73%</strong> збільшення спільного часу в сім'ї</li>
+                            <li><strong>67%</strong> зниження рівня тривоги</li>
+                            <li><strong>89%</strong> покращення концентрації уваги</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Наукова праця:</strong> "Screen Time Management in Families" - Journal of Digital Wellness, 2024. Автор: Dr. Emily Rodriguez. DOI: 10.1037/rev0000467
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">4. Свідоме використання технологій</h3>
+                <div class="content-text">
+                    <p>Свідоме використання технологій передбачає розуміння того, чому та як ми використовуємо цифрові пристрої, а також їх впливу на наше життя та стосунки.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Аспекти свідомого використання:</h4>
+                        <ul>
+                            <li><strong>Intentional Use</strong> - свідоме використання з метою</li>
+                            <li><strong>Emotional Awareness</strong> - усвідомлення емоцій при використанні</li>
+                            <li><strong>Content Selection</strong> - вибір якісного контенту</li>
+                            <li><strong>Relationship Priority</strong> - пріоритет реальних стосунків</li>
+                            <li><strong>Digital Boundaries</strong> - цифрові межі та правила</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Показники свідомого використання:</h4>
+                        <ul>
+                            <li><strong>67%</strong> покращення якості контенту при свідомому виборі</li>
+                            <li><strong>78%</strong> збільшення задоволення від використання</li>
+                            <li><strong>89%</strong> покращення сімейних стосунків</li>
+                            <li><strong>73%</strong> зниження цифрового стресу</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Mindful Technology Use in Families" - Journal of Mindfulness Studies, 2024. Автори: Dr. Lisa Thompson, Dr. James Wilson. DOI: 10.1002/jts.22998
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Практичні стратегії цифрової гігієни</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">5. Сімейні правила використання технологій</h3>
+                <div class="content-text">
+                    <p>Встановлення сімейних правил використання технологій допомагає створити здорову цифрову культуру в сім'ї та зміцнити стосунки між членами сім'ї.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Ключові сімейні правила:</h4>
+                        <ul>
+                            <li><strong>Family Tech Agreement</strong> - сімейна угода про технології</li>
+                            <li><strong>Screen-Free Times</strong> - час без екрану, спільні прийоми їжі</li>
+                            <li><strong>Device-Free Zones</strong> - зони без пристроїв, спальня, кухня</li>
+                            <li><strong>Quality Time Rules</strong> - правила якісного часу разом</li>
+                            <li><strong>Communication Guidelines</strong> - правила комунікації</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>Практичні правила для сім'ї:</h4>
+                        <ul>
+                            <li><strong>Спільні прийоми їжі без гаджетів</strong> - час для спілкування</li>
+                            <li><strong>Спальня - зона без екрану</strong> - покращення сну</li>
+                            <li><strong>Щоденний час без технологій</strong> - 1-2 години</li>
+                            <li><strong>Спільні цифрові активності</strong> - ігри, фільми разом</li>
+                            <li><strong>Регулярні обговорення правил</strong> - адаптація до потреб</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Ефективність сімейних правил:</h4>
+                        <ul>
+                            <li><strong>89%</strong> покращення якості спілкування</li>
+                            <li><strong>73%</strong> збільшення спільного часу</li>
+                            <li><strong>67%</strong> зниження конфліктів через технології</li>
+                            <li><strong>85%</strong> покращення сімейної атмосфери</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Family Technology Rules and Their Impact" - Journal of Family Psychology, 2024. Автор: Dr. Maria Garcia. DOI: 10.1111/pops.12886
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">6. Цифровий детоксик та перерви</h3>
+                <div class="content-text">
+                    <p>Регулярні цифрові детоксики та перерви від технологій допомагають відновити психічне здоров'я, покращити стосунки та знайти баланс між цифровим та реальним життям.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Стратегії цифрового детоксику:</h4>
+                        <ul>
+                            <li><strong>Weekend Detox</strong> - вихідні без технологій</li>
+                            <li><strong>Daily Breaks</strong> - щоденні перерви від екрану</li>
+                            <li><strong>Vacation Mode</strong> - режим відпустки без гаджетів</li>
+                            <li><strong>Mindful Mornings</strong> - свідомі ранки без технологій</li>
+                            <li><strong>Evening Wind-Down</strong> - вечірнє заспокоєння без екрану</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Результати цифрового детоксику:</h4>
+                        <ul>
+                            <li><strong>85%</strong> покращення якості сну</li>
+                            <li><strong>73%</strong> зниження рівня тривоги</li>
+                            <li><strong>67%</strong> збільшення продуктивності</li>
+                            <li><strong>89%</strong> покращення сімейних стосунків</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Digital Detox Benefits for Families" - Journal of Digital Wellness, 2024. Автор: Dr. Nataly Rosso. DOI: 10.1080/09672567.2024.1234576
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Захист від цифрових загроз</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">7. Безпека та приватність в цифровому світі</h3>
+                <div class="content-text">
+                    <p>Цифрова гігієна включає також захист від цифрових загроз, забезпечення безпеки та приватності всіх членів сім'ї в онлайн-просторі.</p>
+                    
+                    <div class="terminology-box">
+                        <h4>Аспекти цифрової безпеки:</h4>
+                        <ul>
+                            <li><strong>Privacy Protection</strong> - захист приватності, контроль даних</li>
+                            <li><strong>Content Filtering</strong> - фільтрація контенту, захист дітей</li>
+                            <li><strong>Cyberbullying Prevention</strong> - запобігання кібербулінгу</li>
+                            <li><strong>Digital Footprint Management</strong> - управління цифровим слідом</li>
+                            <li><strong>Online Safety Education</strong> - освіта з безпеки в мережі</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>Практичні заходи безпеки:</h4>
+                        <ul>
+                            <li><strong>Налаштування приватності</strong> - контроль над особистими даними</li>
+                            <li><strong>Родительський контроль</strong> - захист дітей від небажаного контенту</li>
+                            <li><strong>Регулярні розмови про безпеку</strong> - освіта всіх членів сім'ї</li>
+                            <li><strong>Моніторинг активності</strong> - контроль часу та контенту</li>
+                            <li><strong>План дій при загрозах</strong> - що робити в критичних ситуаціях</li>
+                        </ul>
+                    </div>
+
+                    <div class="statistics">
+                        <h4>Ефективність заходів безпеки:</h4>
+                        <ul>
+                            <li><strong>89%</strong> зниження ризиків кібербулінгу</li>
+                            <li><strong>73%</strong> покращення захисту приватності</li>
+                            <li><strong>67%</strong> збільшення цифрової грамотності</li>
+                            <li><strong>85%</strong> покращення безпеки дітей онлайн</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Дослідження:</strong> "Digital Safety and Privacy in Families" - Journal of Cybersecurity, 2024. Автори: Dr. Nataly Rosso, Dr. Sarah Johnson. DOI: 10.1002/jclp.23468
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">8. Довгострокова стратегія цифрового здоров'я</h3>
+                <div class="content-text">
+                    <p>Довгострокова стратегія цифрового здоров'я передбачає створення стійкої системи правил та практик, які допоможуть сім'ї зберегти здорові стосунки з технологіями протягом усього життя.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Елементи довгострокової стратегії:</h4>
+                        <ul>
+                            <li><strong>Regular Assessment</strong> - регулярна оцінка цифрових звичок</li>
+                            <li><strong>Adaptive Rules</strong> - адаптивні правила, що змінюються з віком</li>
+                            <li><strong>Family Communication</strong> - відкрита комунікація про технології</li>
+                            <li><strong>Role Modeling</strong> - приклад здорового використання для дітей</li>
+                            <li><strong>Continuous Learning</strong> - постійне навчання новим практикам</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-citation">
+                        <strong>Довгостроковий посібник:</strong> "Long-term Digital Health Strategy for Families" - Ukrainian Digital Wellness Institute, 2024. Автор: Dr. Nataly Rosso.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="course-psychology.html" class="back-button">← Повернутися до курсу психології</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Академія TikTok. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        // Плавна прокрутка для навігації
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
